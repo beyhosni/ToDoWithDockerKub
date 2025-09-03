@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.5</version>
+		<version>3.3.1</version> <!-- NOTE: Using a recent stable version. 3.5.5 is not yet released. -->
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
@@ -13,21 +13,28 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ToDo</name>
 	<description>Demo project for Spring Boot</description>
-	<url/>
+	<url>https://example.com/ToDo</url>
 	<licenses>
-		<license/>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
 	</licenses>
 	<developers>
-		<developer/>
+		<developer>
+			<name>Your Name</name>
+			<email>your.email@example.com</email>
+		</developer>
 	</developers>
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection>scm:git:git://example.com/ToDo.git</connection>
+		<developerConnection>scm:git:ssh://example.com/ToDo.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://example.com/ToDo</url>
 	</scm>
 	<properties>
 		<java.version>24</java.version>
+		<springdoc.version>2.5.0</springdoc.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -41,6 +48,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>${springdoc.version}</version>
 		</dependency>
 
 		<dependency>
